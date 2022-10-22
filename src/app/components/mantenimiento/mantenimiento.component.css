@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+
+/* -----------------FORMULARIO--------------------------- */
+/* html,body{
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+} */
+html{
+  /* font-size: 62.5%; */
+}
+
+*, h1{
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif; */
+  font-family: 'Poppins', sans-serif;
+}
+
+.example-form {
+  min-width: 150px;
+  width: 100%;
+}
+
+.center-content{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   font-size: 15px;
+}
+
+.example-full-width {
+  width: 50%;
+}
+
+.title-main{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 30px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.title-label{
+  margin-bottom: 5px;
+  font-weight: 500;
+  font-size: 17px;
+}
+.container-rdbutton{
+  margin-bottom: 20px;
+}
+.mat-radio-button ~ .mat-radio-button {
+  margin-left: 30px;
+}
+
+
+
+/* ---------------------------------------------------------------- */
+
+/**********FILE INPUTS**********/
+.container-input {
+  /* text-align: center;
+  background: #282828;
+  border-top: 5px solid #c39f77;
+  padding: 50px 0;
+  border-radius: 6px;
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 20px; */
+  margin-bottom: 20px;
+  width: 300px;
+  text-align: center;
+}
+
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.inputfile + label {
+  max-width: 80%;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  padding: 0.625rem 1.25rem;
+}
+
+.inputfile + label svg {
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  fill: currentColor;
+  margin-top: -0.25em;
+  margin-right: 0.25em;
+}
+
+.iborrainputfile {
+  font-size:16px;
+  font-weight:normal;
+  font-family: 'Lato';
+}
+
+/* style 2 */
+
+.inputfile-2 + label {
+  color: #c39f77;
+  color: black;
+  border: 2px solid currentColor;
+}
+
+.inputfile-2:focus + label,
+.inputfile-2.has-focus + label,
+.inputfile-2 + label:hover {
+  color: #9f8465;
+  color: black;
+
+}
+
+.container-button{
+  margin-top: 0;
+  margin-bottom: 60px;
+}
+.container-button button{
+  font-size: 16px;
+}
