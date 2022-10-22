@@ -8,13 +8,14 @@
   padding: 0;
   margin: 0;
 } */
-html{
-  /* font-size: 62.5%; */
-}
+/* html{
+  font-size: 62.5%;
+} */
 
+/* ============================================================================ ESTA COSA CAMBIA LOS ESTILOS DE MI BOTONOES :"v ================================= */
 *, h1{
   /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif; */
-  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
 }
 
 .example-form {
@@ -111,7 +112,7 @@ html{
 
 /* style 2 */
 
-.inputfile-2 + label {
+/* .inputfile-2 + label {
   color: #c39f77;
   color: black;
   border: 2px solid currentColor;
@@ -123,7 +124,7 @@ html{
   color: #9f8465;
   color: black;
 
-}
+} */
 
 .container-button{
   margin-top: 0;
