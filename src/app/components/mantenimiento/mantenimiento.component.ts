@@ -33,19 +33,24 @@ export class MantenimientoComponent implements OnInit {
   constructor(
     public solicituServices: SolicituServices,
   ) { }
-  
+
   ngOnInit(): void {
   }
+  cuadro_nombre:string="";
+  cuadro_documento:string="";
+  cuadro_direccion:string="";
 
   registrarSolicitud(){
     /* MODELO EN LA QUE DEBES ENVIAR LOS DATOS  */
     let parameter = {
+
       n_id_solicitud_cliente: 0,
-      c_nombre: 'c_nombre',
+      c_nombre: this.cuadro_nombre,
       n_id_tipo_doc: 1,
-      c_documento: 'c_documento',
-      c_direccion: 'c_direccion',
+      c_documento: this.cuadro_documento,
+      c_direccion: this.cuadro_direccion,
       c_codigo: 'EXP10202201'
+
     }
 
     this.solicituServices.registrarSolicitud(parameter).subscribe(
@@ -55,14 +60,14 @@ export class MantenimientoComponent implements OnInit {
             console.log(result.data);
           }else{
             console.log(result);
-            
+
           }
         } catch (error) {
           console.log(error);
-          
+
         }
       }, error =>{
-        console.log(error.error);        
+        console.log(error.error);
       }
     );
 
@@ -91,25 +96,25 @@ export class MantenimientoComponent implements OnInit {
               if (result.estado) {
                 console.log("ARCHIVO GUARDADO CORRECTAMENTE");
                 /*AQUÍ PUEDES HACER LO QUE QUIERAS xD */
-                
+
               } else {
-                
+
               }
             }, error => {
               alert(error.error);
               console.log(error);
             }
-          );          
+          );
         } else {
-          
+
         }
       }, error => {
         alert(error.error);
         console.log(error);
-        
+
       }
     );
-  
+
   }
 
 }
