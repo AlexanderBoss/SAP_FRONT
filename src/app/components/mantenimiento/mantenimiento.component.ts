@@ -36,14 +36,13 @@ export class MantenimientoComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  cuadro_nombre:string="";
-  cuadro_documento:string="";
-  cuadro_direccion:string="";
+  cuadro_nombre:String="";
+  cuadro_documento:String="";
+  cuadro_direccion:String="";
 
   registrarSolicitud(){
     /* MODELO EN LA QUE DEBES ENVIAR LOS DATOS  */
     let parameter = {
-
       n_id_solicitud_cliente: 0,
       c_nombre: this.cuadro_nombre,
       n_id_tipo_doc: 1,
