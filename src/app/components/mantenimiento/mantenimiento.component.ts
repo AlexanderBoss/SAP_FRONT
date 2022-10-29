@@ -15,7 +15,11 @@ interface Documento {
 export class MantenimientoComponent implements OnInit {
 
 
+  cuadro_nombre:String="";
+  cuadro_documento:String="";
+  cuadro_direccion:String="";
 
+  idDocumento: Number = 0;
   // LISTA DESPLEGABLE
   documentos: Documento[] = [
     {value: '1', viewValue: 'DNI'},
@@ -36,19 +40,28 @@ export class MantenimientoComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  cuadro_nombre:String="";
-  cuadro_documento:String="";
-  cuadro_direccion:String="";
+  
+  selectTipoDoc(value: any){    
+    this.idDocumento = parseInt(value);
+  }
 
   registrarSolicitud(){
     /* MODELO EN LA QUE DEBES ENVIAR LOS DATOS  */
+    const fecha = new Date();
+    console.log(fecha.getFullYear());
+    console.log(fecha.getMonth() + 1);
+    console.log(fecha.getDate());
+
+    let codigoExp = "EXP-"+fecha.getFullYear()+(fecha.getMonth() + 1) + fecha.getDate()+"-"+ this.cuadro_documento;
+    console.log(codigoExp);
+    
     let parameter = {
       n_id_solicitud_cliente: 0,
       c_nombre: this.cuadro_nombre,
-      n_id_tipo_doc: 1,
+      n_id_tipo_doc: this.idDocumento,
       c_documento: this.cuadro_documento,
       c_direccion: this.cuadro_direccion,
-      c_codigo: 'EXP10202201'
+      c_codigo: codigoExp
 
     }
 
@@ -57,6 +70,11 @@ export class MantenimientoComponent implements OnInit {
         try {
           if (result.estado) {
             console.log(result.data);
+            alert("Registro Correcto!")
+            this.cuadro_nombre = "";
+            this.idDocumento = 0;
+            this.cuadro_documento = "";
+            this.cuadro_direccion = "";
           }else{
             console.log(result);
 
