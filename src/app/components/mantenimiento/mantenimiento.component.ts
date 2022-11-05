@@ -40,8 +40,8 @@ export class MantenimientoComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  
-  selectTipoDoc(value: any){    
+
+  selectTipoDoc(value: any){
     this.idDocumento = parseInt(value);
   }
 
@@ -54,12 +54,12 @@ export class MantenimientoComponent implements OnInit {
 
     let codigoExp = "EXP-"+fecha.getFullYear()+(fecha.getMonth() + 1) + fecha.getDate()+"-"+ this.cuadro_documento;
     console.log(codigoExp);
-    
+
     let parameter = {
       n_id_solicitud_cliente: 0,
       c_nombre: this.cuadro_nombre,
       n_id_tipo_doc: this.idDocumento,
-      c_documento: this.cuadro_documento,
+      c_documento: (this.cuadro_documento).toString(),
       c_direccion: this.cuadro_direccion,
       c_codigo: codigoExp
 
@@ -80,6 +80,7 @@ export class MantenimientoComponent implements OnInit {
 
           }
         } catch (error) {
+
           console.log(error);
 
         }

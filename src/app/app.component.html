@@ -1,12 +1,12 @@
 <mat-toolbar color="primary" class="navbar">
-  <div>TOMA DE DECISIONES</div>
+  <a href=""><div>TOMA DE DECISIONES</div></a>
   <div>
 
-      <a [routerLink]="['/home']" >Consulta Cliente</a>
+      
       <button mat-button [matMenuTriggerFor]="cliente">At. cliente</button>
         <mat-menu #cliente="matMenu">
           <button mat-menu-item>Consulta por Nis/Medidor</button>
-          <button mat-menu-item>Consulta por Cliente</button>
+          <button mat-menu-item [routerLink]="'/home'" >Consulta por Cliente</button>
           <button mat-menu-item>Consulta por Direccion</button>
           <button mat-menu-item>Consulta por Reg.Usuario No Dom.(RUND)</button>
           <button mat-menu-item>Consulta por CUP</button>

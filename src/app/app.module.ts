@@ -24,6 +24,8 @@ import {MatStepperModule} from '@angular/material/stepper';
 import {MatMenuModule} from '@angular/material/menu';
 import { MatRadioModule } from '@angular/material/radio';
 import { MantenimientoComponent } from './components/mantenimiento/mantenimiento.component';
+import { ErrorPersonalizadoComponent } from './error-personalizado/error-personalizado.component';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -32,7 +34,9 @@ import { MantenimientoComponent } from './components/mantenimiento/mantenimiento
     AppComponent,
     HomeComponent,
     VerClienteComponent,
-    MantenimientoComponent
+    MantenimientoComponent,
+    ErrorPersonalizadoComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
