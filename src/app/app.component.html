@@ -2,7 +2,8 @@
   <a href=""><div>TOMA DE DECISIONES</div></a>
   <div>
 
-      
+    <button mat-button [routerLink]="'/login'">Login</button>
+    
       <button mat-button [matMenuTriggerFor]="cliente">At. cliente</button>
         <mat-menu #cliente="matMenu">
           <button mat-menu-item>Consulta por Nis/Medidor</button>
