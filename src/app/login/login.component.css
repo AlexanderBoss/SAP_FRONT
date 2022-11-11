@@ -176,3 +176,7 @@ body {
 .social-login__icon:hover {
   transform: scale(1.5);
 }
+.login__fields{
+  color: #1308e9;
+  font-size: 30px;
+}

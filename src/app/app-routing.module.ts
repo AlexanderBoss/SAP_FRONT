@@ -12,9 +12,9 @@ const routes: Routes = [
     {path:'',component:LoginComponent},
     {path:'home',component:HomeComponent},
     {path:'mantenimiento',component:MantenimientoComponent},
-    {path:'menu',component:MenuComponent}, 
+    {path:'menu',component:MenuComponent},
     {path:'seguimiento',component:SeguimientoComponent},
-    {path:'**',component:ErrorPersonalizadoComponent} 
+    {path:'**',component:ErrorPersonalizadoComponent}
 
 
 ];

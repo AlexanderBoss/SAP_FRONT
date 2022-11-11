@@ -4,13 +4,14 @@
     </mat-sidenav>
     <mat-sidenav-content>
         <mat-toolbar color="primary" class="navbar">
-            <a href="">
+            <a >
                 <div>TOMA DE DECISIONES</div>
             </a>
             <div>
-        
+
                 <!-- <button mat-button [routerLink]="'/login'">Login</button> -->
-        
+
+                <button mat-button [routerLink]="''">Logout</button>
                 <button mat-button [matMenuTriggerFor]="cliente">At. cliente</button>
                 <mat-menu #cliente="matMenu">
                     <button mat-menu-item>Consulta por Nis/Medidor</button>
@@ -37,11 +38,11 @@
                     <button mat-menu-item>Cambio Estado Recibo DU036</button>
                     <!-- <button mat-menu-item [matMenuTriggerFor]="invertebrates">Invertebrates</button> -->
                 </mat-menu>
-        
+
             </div>
-        </mat-toolbar>       
-        
-        
+        </mat-toolbar>
+
+
 
         <ng-content>
 
