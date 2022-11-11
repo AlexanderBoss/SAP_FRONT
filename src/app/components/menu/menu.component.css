@@ -1,0 +1,13 @@
+.navbar{
+    justify-content: space-between;
+  }
+  
+  a{
+    padding-right: 1rem;
+    color: aliceblue;
+    text-decoration: none;
+  }
+
+  .bodyMenu{
+    height: 100%;
+  }

@@ -1,74 +1,77 @@
-<mat-card>
+<app-menu>
+    <mat-card>
   
-    <mat-card-content>
-        <!--         <p>home works!</p>
-
-        <button mat-raised-button color="primary" (click)="getUser()">Primary</button>
-        <button mat-raised-button color="primary" (click)="get()">get</button> -->
-
-        <div class="contenedor">
-            <mat-form-field >
-                <mat-label>Buscar</mat-label>
-                <input matInput (keyup)="applyFilter($event)" placeholder="Buscar..." #input>
-            </mat-form-field>
-
-            <mat-form-field>
-                <mat-select placeholder="Filtro Deuda">
-                    <mat-option value="0" (click)='select(0)'>
-                        -TODOS-
-                    </mat-option>
-                    <mat-option *ngFor="let e of tipodeuda" [value]="e.id"
-                        (click)='select(e.id)'>
-                        {{e.name}}
-                    </mat-option>
-                </mat-select>
-            </mat-form-field>
-
-        </div>
-
-        <div class="mat-elevation-z8">
-            <table mat-table [dataSource]="tabla" matSort>
-
-                <ng-container matColumnDef="id">
-                    <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
-                    <td mat-cell *matCellDef="let row"> {{row.id}} </td>
-                </ng-container>
-
-                <ng-container matColumnDef="ruc">
-                    <th mat-header-cell *matHeaderCellDef mat-sort-header> RUC </th>
-                    <td mat-cell *matCellDef="let row"> {{row.ruc}} </td>
-                </ng-container>
-
-                <ng-container matColumnDef="denominacion">
-                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Denominacion </th>
-                    <td mat-cell *matCellDef="let row"> {{row.denominacion}} </td>
-                </ng-container>
-
-                <ng-container matColumnDef="deuda">
-                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Deuda </th>
-                    <td mat-cell *matCellDef="let row"> {{row.deuda}} </td>
-                </ng-container>
-
-                <ng-container matColumnDef="acciones">
-                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Ver </th>
-                    <td mat-cell *matCellDef="let row">
-                        <button mat-icon-button color="accent" (click)="show(row)">
-                            <mat-icon aria-label="Example icon-button with a heart icon">remove_red_eye</mat-icon>
-                        </button>
-                    </td>
-                </ng-container>
-
-                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-
-                <!-- Row shown when there is no matching data. -->
-                <tr class="mat-row" *matNoDataRow>
-                    <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
-                </tr>
-            </table>
-
-            <mat-paginator [pageSizeOptions]="[10, 25, 100]" aria-label="Select page of users"></mat-paginator>
-        </div>
-
-    </mat-card-content>
-</mat-card>
+        <mat-card-content>
+            <!--         <p>home works!</p>
+    
+            <button mat-raised-button color="primary" (click)="getUser()">Primary</button>
+            <button mat-raised-button color="primary" (click)="get()">get</button> -->
+    
+            <div class="contenedor">
+                <mat-form-field >
+                    <mat-label>Buscar</mat-label>
+                    <input matInput (keyup)="applyFilter($event)" placeholder="Buscar..." #input>
+                </mat-form-field>
+    
+                <mat-form-field>
+                    <mat-select placeholder="Filtro Deuda">
+                        <mat-option value="0" (click)='select(0)'>
+                            -TODOS-
+                        </mat-option>
+                        <mat-option *ngFor="let e of tipodeuda" [value]="e.id"
+                            (click)='select(e.id)'>
+                            {{e.name}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+    
+            </div>
+    
+            <div class="mat-elevation-z8">
+                <table mat-table [dataSource]="tabla" matSort>
+    
+                    <ng-container matColumnDef="id">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
+                        <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+                    </ng-container>
+    
+                    <ng-container matColumnDef="ruc">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> RUC </th>
+                        <td mat-cell *matCellDef="let row"> {{row.ruc}} </td>
+                    </ng-container>
+    
+                    <ng-container matColumnDef="denominacion">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Denominacion </th>
+                        <td mat-cell *matCellDef="let row"> {{row.denominacion}} </td>
+                    </ng-container>
+    
+                    <ng-container matColumnDef="deuda">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Deuda </th>
+                        <td mat-cell *matCellDef="let row"> {{row.deuda}} </td>
+                    </ng-container>
+    
+                    <ng-container matColumnDef="acciones">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Ver </th>
+                        <td mat-cell *matCellDef="let row">
+                            <button mat-icon-button color="accent" (click)="show(row)">
+                                <mat-icon aria-label="Example icon-button with a heart icon">remove_red_eye</mat-icon>
+                            </button>
+                        </td>
+                    </ng-container>
+    
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    
+                    <!-- Row shown when there is no matching data. -->
+                    <tr class="mat-row" *matNoDataRow>
+                        <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+                    </tr>
+                </table>
+    
+                <mat-paginator [pageSizeOptions]="[10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+            </div>
+    
+        </mat-card-content>
+    </mat-card>
+    
+</app-menu>

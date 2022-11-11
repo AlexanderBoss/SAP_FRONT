@@ -26,6 +26,9 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MantenimientoComponent } from './components/mantenimiento/mantenimiento.component';
 import { ErrorPersonalizadoComponent } from './error-personalizado/error-personalizado.component';
 import { LoginComponent } from './login/login.component';
+import { MenuComponent } from './components/menu/menu.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import { SeguimientoComponent } from './components/seguimiento/seguimiento.component';
 
 
 
@@ -36,7 +39,9 @@ import { LoginComponent } from './login/login.component';
     VerClienteComponent,
     MantenimientoComponent,
     ErrorPersonalizadoComponent,
-    LoginComponent
+    LoginComponent,
+    MenuComponent,
+    SeguimientoComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +62,8 @@ import { LoginComponent } from './login/login.component';
     MatStepperModule,
     MatStepperModule,
     MatMenuModule,
-    MatRadioModule
+    MatRadioModule,
+    MatSidenavModule
 
   ],
   entryComponents: [

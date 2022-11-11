@@ -1,0 +1,62 @@
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav>
+
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <mat-toolbar color="primary" class="navbar">
+            <a href="">
+                <div>TOMA DE DECISIONES</div>
+            </a>
+            <div>
+        
+                <!-- <button mat-button [routerLink]="'/login'">Login</button> -->
+        
+                <button mat-button [matMenuTriggerFor]="cliente">At. cliente</button>
+                <mat-menu #cliente="matMenu">
+                    <button mat-menu-item>Consulta por Nis/Medidor</button>
+                    <button mat-menu-item [routerLink]="'/home'">Consulta por Cliente</button>
+                    <button mat-menu-item>Consulta por Direccion</button>
+                    <button mat-menu-item>Consulta por Reg.Usuario No Dom.(RUND)</button>
+                    <button mat-menu-item>Consulta por CUP</button>
+                    <button mat-menu-item>Consulta por Clave antigua</button>
+                    <button mat-menu-item>Consulta de Saldos</button>
+                    <button mat-menu-item>Consulta de Movimientos</button>
+                    <button mat-menu-item>Consulta de Mult.Individualizados</button>
+                    <button mat-menu-item>Consulta de Reclamaciones</button>
+                    <button mat-menu-item>Escritorio de Trabajo</button>
+                    <button mat-menu-item>Consulta Capacidad Contrastaciones</button>
+                    <button mat-menu-item>Audiencias</button>
+                    <button mat-menu-item>Comunicaciones</button>
+                    <button mat-menu-item>Clientes / Cuentas</button>
+                    <button mat-menu-item [matMenuTriggerFor]="expediente">Expedientes</button>
+                    <button mat-menu-item>Contratos</button>
+                    <button mat-menu-item>Suministros Eventuales</button>
+                    <button mat-menu-item>Consulta Aquafono</button>
+                    <button mat-menu-item>Fuente propia</button>
+                    <button mat-menu-item>Venta de Agua por Tancadas</button>
+                    <button mat-menu-item>Cambio Estado Recibo DU036</button>
+                    <!-- <button mat-menu-item [matMenuTriggerFor]="invertebrates">Invertebrates</button> -->
+                </mat-menu>
+        
+            </div>
+        </mat-toolbar>       
+        
+        
+
+        <ng-content>
+
+        </ng-content>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+
+<mat-menu #expediente="matMenu">
+    <button mat-menu-item [routerLink]="['/mantenimiento']">Mantenimiento</button>
+    <button mat-menu-item [routerLink]="['/seguimiento']">Seguimiento</button>
+    <button mat-menu-item>Gestion de expedientes</button>
+    <button mat-menu-item>Expedientes Cobrados x FAVENCON</button>
+
+</mat-menu>
+
+
+
+

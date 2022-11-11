@@ -1,57 +1,66 @@
-<h1 class="title-main">Registro de solicitud</h1>
+<app-menu>
+  <h1 class="title-main">Registro de solicitud</h1>
 
-<form class="example-form center-content">
+  <form class="example-form center-content">
 
-  <label id="example-radio-group-label" class="title-label">Tipo de cliente</label>
-  <mat-radio-group class="container-rdbutton">
-    <mat-radio-button value="1" checked>Usuario</mat-radio-button>
-    <mat-radio-button value="2">Representante</mat-radio-button>
-  </mat-radio-group>
+    <label id="example-radio-group-label" class="title-label">Tipo de cliente</label>
+    <mat-radio-group class="container-rdbutton">
+      <mat-radio-button value="1" checked>Usuario</mat-radio-button>
+      <mat-radio-button value="2">Representante</mat-radio-button>
+    </mat-radio-group>
 
-  <mat-form-field class="example-full-width" appearance="outline">
-    <mat-label>Nombre completo</mat-label>
-    <input type="text" name="nombre" matInput placeholder="Ejemplo: Keneth Lopez Izaguirre"  [(ngModel)]="cuadro_nombre" required>
-  </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>Nombre completo</mat-label>
+      <input type="text" name="nombre" matInput placeholder="Ejemplo: Keneth Lopez Izaguirre"
+        [(ngModel)]="cuadro_nombre" required>
+    </mat-form-field>
 
-  <mat-form-field appearance="outline" class="example-full-width">
-    <mat-label>Selecciona tu documento</mat-label>
-    <mat-select>
-      <mat-option *ngFor="let documento of documentos" [value]="documento.value" (click)="selectTipoDoc(documento.value)">
-        {{documento.viewValue}}
-      </mat-option>
-    </mat-select>
-  </mat-form-field>
+    <mat-form-field appearance="outline" class="example-full-width">
+      <mat-label>Selecciona tu documento</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let documento of documentos" [value]="documento.value"
+          (click)="selectTipoDoc(documento.value)">
+          {{documento.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
 
-  <mat-form-field class="example-full-width" appearance="outline">
-    <mat-label>Número de documento</mat-label>
-    <input type="number" matInput placeholder="Ejemplo: 71234567" name="documento" [(ngModel)]="cuadro_documento" required>
-  </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>Número de documento</mat-label>
+      <input type="number" matInput placeholder="Ejemplo: 71234567" name="documento" [(ngModel)]="cuadro_documento"
+        required>
+    </mat-form-field>
 
-  <mat-form-field class="example-full-width" appearance="outline">
-    <mat-label>Dirección</mat-label>
-    <input color="accent" type="text" matInput placeholder="Ejemplo: C. Amador Merino Reyna 465, San Isidro 15046" name="direccion" [(ngModel)]="cuadro_direccion" required>
-  </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>Dirección</mat-label>
+      <input color="accent" type="text" matInput placeholder="Ejemplo: C. Amador Merino Reyna 465, San Isidro 15046"
+        name="direccion" [(ngModel)]="cuadro_direccion" required>
+    </mat-form-field>
 
 
-<!-- ALGUNOS DE TUS ESTILOS AFECTA A MI BOTON :"v PERO IGUAL FUNCIONA" -->
+    <!-- ALGUNOS DE TUS ESTILOS AFECTA A MI BOTON :"v PERO IGUAL FUNCIONA" -->
 
-<!-- boton para cara de TituloPropiedad -->
-<input id="file" #fileInput hidden type='file' accept="application/pdf"  (change)="uploadfile($event.target, 'TituloPropiedad') ">
-<button type="button" mat-raised-button (click)="fileInput.click()">
-  <mat-icon>cloud_upload</mat-icon>
-  Seleccionar Titulo
-</button>
-<br><br>
-<!-- boton para cara de Croquis -->
-<input id="file2" #fileInput2 hidden type='file' accept="application/pdf"  (change)="uploadfile($event.target, 'Croquis')">
-<button type="button" mat-raised-button (click)="fileInput2.click()">
-  <mat-icon>cloud_upload</mat-icon>
-  Seleccionar Croquis
-</button>
+    <!-- boton para cara de TituloPropiedad -->
+    <input id="file" #fileInput hidden type='file' accept="application/pdf"
+      (change)="uploadfile($event.target, 'TituloPropiedad') ">
+    <button type="button" mat-raised-button (click)="fileInput.click()">
+      <mat-icon>cloud_upload</mat-icon>
+      Seleccionar Titulo
+    </button>
+    <br><br>
+    <!-- boton para cara de Croquis -->
+    <input id="file2" #fileInput2 hidden type='file' accept="application/pdf"
+      (change)="uploadfile($event.target, 'Croquis')">
+    <button type="button" mat-raised-button (click)="fileInput2.click()">
+      <mat-icon>cloud_upload</mat-icon>
+      Seleccionar Croquis
+    </button>
 
-<br><br>
+    <br><br>
 
-<button   mat-raised-button color="accent" (click)="registrarSolicitud()">Registrar solicitud</button>
+    <button mat-raised-button color="accent" (click)="registrarSolicitud()">Registrar solicitud</button>
 
-</form>
+  </form>
 
+
+</app-menu>
